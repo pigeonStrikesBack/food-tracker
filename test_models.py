@@ -20,7 +20,7 @@ def test_database_setup():
     inspector = inspect(engine)
     tables = inspector.get_table_names()
     
-    expected_tables = ["users", "foods"]  # Add "foods", "food_entries" later
+    expected_tables = ["users", "foods", "food_entries"]  # Add "foods", "food_entries" later
     
     for table in expected_tables:
         assert table in tables
