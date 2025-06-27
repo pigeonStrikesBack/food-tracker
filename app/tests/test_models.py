@@ -2,17 +2,6 @@ from sqlalchemy import inspect
 from app.models.models import User
 from app.database import engine, Base
 
-# def test_user_model():
-#     # create all tables
-#     Base.metadata.create()
-#     Base.metadata.create_all(bind=engine)
-#     print("✅ User model created successfully!")
-    
-
-# if __name__ == "__main__":
-#     test_user_model()
-#     print("✅ Database tables created!")
-
 def test_database_setup():
     """Test that all models create tables correctly"""
     Base.metadata.create_all(bind=engine)
