@@ -15,7 +15,7 @@ class User(Base):
 class Food(Base):
     __tablename__ = "foods"
     id = Column(Integer, primary_key=True)
-    name = Column(String(100), nullable=False)
+    name = Column(String(100), unique=True, nullable=False)
     calories_per_100g = Column(Integer, nullable=False)
 
     # relationships
